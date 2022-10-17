@@ -1,16 +1,23 @@
 # location_tracker
 
-A new Flutter project.
+a simple location tracker app using Firebase Auth and Cloud Firestore.
 
-## Getting Started
+On first launch, the app lets users sign in with Firebase. (use anonymous sign-in for
+simplicity).
 
-This project is a starting point for a Flutter application.
+After sign in, the app shows a page where the user can:
 
-A few resources to get you started if this is your first Flutter project:
+● Enter his/her details (name, phone number) into a form and submit it
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+● Save this along with the current time into Firestore
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+● Each truck driver can start a shipment by inserting the shipment_id
+
+● Upon starting a shipment the location of the truck driver will be sent
+automatically to the database for that shipment with its timestamp
+
+● View a list of all shipments, sorted by most recent date.
+
+● Each shipment will display the list of locations stored as a route on a map
+
+● The app should update in realtime when the data changes on Firestore.
